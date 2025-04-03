@@ -41,5 +41,4 @@ Le projet consiste à :
    - ***procedures.sql***
    - ***triggers.sql***
    - ***indexes.sql***
-   - ***clusters.sql***
    - ***populate.sql***
