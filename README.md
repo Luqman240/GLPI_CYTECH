@@ -36,11 +36,11 @@ Le projet consiste à :
 
 1. **Récuperer les fichiers du repo**
 2. **Ouvrir SQLPLUS**
-3. **Après avoir créer un nouvel utilisateur DBA, effectuer la commande @"chemin/vers/le/fichier.sql dans l'ordre suivant :**
+3. **Après avoir créer un nouvel utilisateur DBA, effectuer la commande @"chemin/vers/le/fichier.sql" dans l'ordre suivant :**
    - ***tables_roles.sql***
    - ***procedures.sql***
    - ***triggers.sql***
    - ***indexes.sql***
    - ***populate.sql***
-4. **Pour le test de performances, effectuer la commande @"chemin/vers/le/performances.sql dans l'ordre suivant :**
+4. **Pour le test de performances, effectuer la commande @"chemin/vers/le/performances.sql"**
 
