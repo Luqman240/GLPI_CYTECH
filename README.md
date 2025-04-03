@@ -42,3 +42,5 @@ Le projet consiste à :
    - ***triggers.sql***
    - ***indexes.sql***
    - ***populate.sql***
+4. **Pour le test de performances, effectuer la commande @"chemin/vers/le/performances.sql dans l'ordre suivant :**
+
