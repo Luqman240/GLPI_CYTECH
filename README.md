@@ -32,17 +32,14 @@ Le projet consiste à :
 - Validation des performances via un jeu de tests généré en PL/SQL
 - Gestion multi-sites (Cergy, Pau)
 
-## Structure du Projet
-
-Le projet est organisé comme suit :
-
-- `docs/` : Documentation liée au projet et au reverse engineering de GLPI
-- `src/` : Code source des scripts PL/SQL (procédures, fonctions, triggers, etc.)
-- `tests/` : Scripts pour tester les performances de la base de données
-- `README.md` : Ce fichier de documentation
-
 ## Instructions pour l'Installation
 
-1. **Cloner le dépôt** :
-   ```bash
-   git clone https://github.com/nom_utilisateur/nom_projet.git
+1. **Récuperer les fichiers du repo**
+2. **Ouvrir SQLPLUS**
+3. **Après avoir créer un nouvel utilisateur DBA, effectuer la commande @"chemin/vers/le/fichier.sql dans l'ordre suivant :**
+   - ***tables_roles.sql***
+   - ***procedures.sql***
+   - ***triggers.sql***
+   - ***indexes.sql***
+   - ***clusters.sql***
+   - ***populate.sql***
