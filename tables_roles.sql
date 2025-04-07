@@ -1,4 +1,4 @@
--- 📌 GESTION DES ROLES ET PERMISSIONS --
+--  GESTION DES ROLES ET PERMISSIONS --
 BEGIN
    EXECUTE IMMEDIATE 'DROP TABLE glpi_sites';
 EXCEPTION
@@ -105,13 +105,13 @@ CREATE ROLE c##technicien_role;
 CREATE ROLE c##enseignant_role;
 CREATE ROLE c##etudiant_role;
 
--- 📌 Table des écoles
+-- Table des écoles
 CREATE TABLE glpi_clients (
     id NUMBER PRIMARY KEY,
     nom VARCHAR(255) NOT NULL UNIQUE
 );
 
--- 📌 Table des sites (Cergy, Pau)
+-- Table des sites (Cergy, Pau)
 CREATE TABLE glpi_sites (
     id NUMBER PRIMARY KEY,
     nom VARCHAR(255) NOT NULL UNIQUE,
@@ -119,7 +119,7 @@ CREATE TABLE glpi_sites (
     FOREIGN KEY (client_id) REFERENCES glpi_clients(id)
 );
 
--- 📌 Table des utilisateurs (enseignants, techniciens, étudiants, admin)
+--  Table des utilisateurs (enseignants, techniciens, étudiants, admin)
 CREATE TABLE glpi_users (
     id NUMBER PRIMARY KEY,
     nom VARCHAR(255) NOT NULL,
@@ -133,7 +133,7 @@ CREATE TABLE glpi_users (
     FOREIGN KEY (site_id) REFERENCES glpi_sites(id)
 );
 
--- 📌 Table des ordinateurs
+--  Table des ordinateurs
 CREATE TABLE glpi_computers (
     id NUMBER PRIMARY KEY,
     marque VARCHAR(255) NOT NULL,
@@ -141,7 +141,7 @@ CREATE TABLE glpi_computers (
     type VARCHAR(50) NOT NULL
 );
 
--- 📌 Table des imprimantes
+--  Table des imprimantes
 CREATE TABLE glpi_printers (
     id NUMBER PRIMARY KEY,
     marque VARCHAR(255) NOT NULL,
@@ -149,7 +149,7 @@ CREATE TABLE glpi_printers (
     type VARCHAR(50) NOT NULL
 );
 
--- 📌 Table des ordinateurs utilisés (répartition par site)
+--  Table des ordinateurs utilisés (répartition par site)
 CREATE TABLE glpi_computers_items (
     id NUMBER PRIMARY KEY,
     reference_computer_id INT NOT NULL,
@@ -163,7 +163,7 @@ CREATE TABLE glpi_computers_items (
     FOREIGN KEY (utilisateur_id) REFERENCES glpi_users(id)
 );
 
--- 📌 Table des imprimantes utilisées (répartition par site)
+--  Table des imprimantes utilisées (répartition par site)
 CREATE TABLE glpi_printers_items (
     id NUMBER PRIMARY KEY,
     reference_printer_id INT NOT NULL,
@@ -177,7 +177,7 @@ CREATE TABLE glpi_printers_items (
     FOREIGN KEY (utilisateur_id) REFERENCES glpi_users(id)
 );
 
--- 📌 Table des tickets d'incidents (répartition par site)
+--  Table des tickets d'incidents (répartition par site)
 CREATE TABLE glpi_tickets (
     id NUMBER PRIMARY KEY,
     utilisateur_id INT NOT NULL,  -- Qui a signalé le problème ?
@@ -194,7 +194,7 @@ CREATE TABLE glpi_tickets (
 );
 
 
--- 📌 Table des éléments des tickets (répartition par site)
+-- Table des éléments des tickets (répartition par site)
 CREATE TABLE glpi_tickets_items (
     id NUMBER PRIMARY KEY,
     ticket_id INT NOT NULL,
@@ -211,7 +211,7 @@ CREATE TABLE glpi_tickets_items (
     )
 );
 
--- 📌 Table des résolutions de tickets (répartition par site)
+-- Table des résolutions de tickets (répartition par site)
 CREATE TABLE glpi_tickets_issues (
     id NUMBER PRIMARY KEY,
     ticket_id INT NOT NULL,
