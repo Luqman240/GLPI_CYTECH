@@ -35,12 +35,7 @@ Le projet consiste à :
 ## Instructions pour l'Installation
 
 1. **Récuperer les fichiers du repo**
-2. **Ouvrir SQLPLUS**
-3. **Après avoir créer un nouvel utilisateur DBA, effectuer la commande @"chemin/vers/le/fichier.sql" dans l'ordre suivant :**
-   - ***tables_roles.sql***
-   - ***procedures.sql***
-   - ***triggers.sql***
-   - ***indexes.sql***
-   - ***populate.sql***
-4. **Pour le test de performances, effectuer la commande @"chemin/vers/le/performances.sql"**
+2. **Ouvrir SQLPLUS en tant que SYS**
+3. **Remplacer dans tous les fichiers "system/Luqman123" par les identifiants de votre utilisateur SYSTEM**
+4. **Exécuter l'ensemble des fichiers dans l'ordre avec @"chemin/vers/le/fichier.sql**
 
